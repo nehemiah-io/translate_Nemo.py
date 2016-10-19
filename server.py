@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, json
 
 app = Flask(__name__)
+pets = []
 
 
 @app.route("/")
@@ -14,11 +15,11 @@ def storePets():
     return jsonify({"theAge" : json['age']})
 
 @app.route("/hello", methods = ['GET', "POST"])
-def bigbutts():
+def southpark():
     return "HELLO Children!, Hi Chef!"
 
 @app.route("/hello/<name>")
-def guchimayne(name):
+def Eminem(name):
     return "Hello " + name
 if __name__ == "__main__":
     app.run()
